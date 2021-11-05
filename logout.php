@@ -1,0 +1,11 @@
+<?php   
+session_start();
+if(isset($_SESSION['adminId'])){
+    session_destroy();
+    header("location:admin.php");
+}
+if(isset($_SESSION['userId'])){
+    session_destroy();
+    header("location:index.php");
+}
+?>
